@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { Platform, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { Focus } from "./src/features/Focus";
+import { Timer } from "./src/features/Timer";
 import { colors } from "./src/utils/colors";
 
 export default function App() {
@@ -11,11 +12,7 @@ export default function App() {
       {!currentSubject ? (
         <Focus addSubject={setcurrentSubject} />
       ) : (
-        <View>
-          <Text style={{ color: colors.white }}>
-            now i am set the timer for {currentSubject}
-          </Text>
-        </View>
+        <Timer focusSubject={currentSubject} />
       )}
     </View>
   );
