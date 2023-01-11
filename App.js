@@ -6,13 +6,16 @@ import { Timer } from "./src/features/Timer";
 import { colors } from "./src/utils/colors";
 
 export default function App() {
-  const [currentSubject, setcurrentSubject] = useState("test");
+  const [currentSubject, setcurrentSubject] = useState();
   return (
     <View style={styles.container}>
       {!currentSubject ? (
         <Focus addSubject={setcurrentSubject} />
       ) : (
-        <Timer focusSubject={currentSubject} />
+        <Timer
+          focusSubject={currentSubject}
+          clearSubject={() => setcurrentSubject(null)}
+        />
       )}
     </View>
   );
