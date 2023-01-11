@@ -6,7 +6,7 @@ import { Timer } from "./src/features/Timer";
 import { colors } from "./src/utils/colors";
 
 export default function App() {
-  const [currentSubject, setcurrentSubject] = useState(null);
+  const [currentSubject, setcurrentSubject] = useState("test");
   return (
     <View style={styles.container}>
       {!currentSubject ? (
