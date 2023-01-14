@@ -33,9 +33,11 @@ const styles = StyleSheet.create({
   },
   button: {
     justifyContent: "center",
+    marginTop: spacing.lg,
   },
   textInput: {
     flex: 1,
     marginRight: spacing.sm,
+    marginTop: spacing.lg,
   },
 });
